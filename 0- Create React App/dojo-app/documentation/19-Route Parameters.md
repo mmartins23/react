@@ -1,9 +1,24 @@
+create a new component BlogDetails.js
+
+```js
+const BlogDetails = () => {
+    return ( 
+        <div className="blog-details">
+            <h2>Blog Details</h2>
+        </div>
+     );
+}
+ 
+export default BlogDetails;
+```
+
+
+```js
 import Navbar from './Navbar'
 import Home from './Home'
 import Create from './Create';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import BlogDetails from './BlogDetails';
-import NotFound from './NotFound';
 
 function App() {
   return (
@@ -21,9 +36,6 @@ function App() {
         <Route path='/blogs/:id'>
         <BlogDetails/>
         </Route>
-        <Route path='*'>
-         <NotFound />
-        </Route>
       </Switch>
       </div>
     </div>
@@ -32,3 +44,19 @@ function App() {
 }
 
 export default App
+```
+
+```js
+import { useParams } from "react-router-dom";
+
+const BlogDetails = () => {
+    const {id} = useParams();
+    return ( 
+        <div className="blog-details">
+            <h2>Blog Details - {id} </h2>
+        </div>
+     );
+}
+ 
+export default BlogDetails;
+```

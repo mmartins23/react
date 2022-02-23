@@ -1,3 +1,11 @@
+import link from react router dom
+```js
+import { Link } from "react-router-dom";
+```
+
+add <LINK>
+
+```js
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,3 +20,4 @@ const Navbar = () => {
 }
  
 export default Navbar;
+```
